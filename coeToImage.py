@@ -2,7 +2,7 @@ from PIL import Image
 import os
 
 # Load the COE file
-coe_file = 'samsung.coe'
+coe_file = 'boy.coe'
 # Make an array or tuple to store RGB value for eah pixel
 pixel_array = []
 # Read the file
