@@ -2,7 +2,7 @@ from PIL import Image
 import os
 
 # Load any image file
-file = 'boy_300.jpg'
+file = 'boy.jpg'
 image = Image.open(file)
 
 # Get the pixel format of the image using 'mode' attribute
