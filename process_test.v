@@ -110,7 +110,7 @@ module process_test;
 	           end
 	           #1.75;
 	       join
-	   else if(addra < 18'd200001)
+		else if(addra < 18'd200001) // put value slightly greater than total number of pixels
 	       begin
 	           fork
 	               begin
