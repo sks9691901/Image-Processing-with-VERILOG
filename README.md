@@ -8,7 +8,7 @@ How to generate Block Memory Generator in VIVADO
 ![Screenshot (26)_LI](https://user-images.githubusercontent.com/76876019/119669630-d3cf2e00-be55-11eb-9cf4-15ad65b3fb6e.jpg)
 Rename if you want
 ![Screenshot (29)_LI](https://user-images.githubusercontent.com/76876019/119669648-d6ca1e80-be55-11eb-9b5c-fd5c1fd3793a.jpg)
-Choose width 24 (8bits for red, 8bits for green, 8bits for blue)
+Choose width 24 (8bits for red, 8bits for green, 8bits for blue). 
 Choose depth slightly greater than total number of pixels present in your image (here 2,00,000 pixels)
 ![Screenshot (30)_LI](https://user-images.githubusercontent.com/76876019/119669660-d92c7880-be55-11eb-8c94-5b1713952f97.jpg)
 Load COE file
