@@ -2,7 +2,7 @@ from PIL import Image
 import os
 
 # Load any image file
-file = 'boy.jpg'
+file = "C:\\Users\\sks96\\VS Code\\car.png"
 image = Image.open(file)
 
 # Get the pixel format of the image using 'mode' attribute
@@ -14,7 +14,7 @@ if image.mode != 'RGB':  # If not RGB then convert to RGB
 # Create a new COE file
 coe_file = open(f_name + '.coe', 'w')
 
-coe_file.write("memory_initialization_radix=2;\nmemory_initializing_vector=\n")
+coe_file.write("Memory_initialization_radix=2;\nMemory_initialization_vector=\n")
 
 # get size of the image using 'size'  attribute
 (width, height) = image.size
@@ -32,3 +32,4 @@ for h in range(height):
             coe_file.write(",\n")
 
 coe_file.close()  # Close the file
+print("DONE!")
