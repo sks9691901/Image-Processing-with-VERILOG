@@ -3,7 +3,7 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 26.05.2021 08:01:29
+// Create Date: 26.05.2021 17:28:48
 // Design Name: 
 // Module Name: process_test
 // Project Name: 
@@ -30,7 +30,7 @@ module process_test;
     reg clka,reset,OKin;         //******* 
     
     reg ena,wea;                 //*******
-    reg [16:0]addra;                   //******> For BRAM
+    reg [17:0]addra;                   //******> For BRAM
     reg [23:0]dina;              //*******
     
     // Outputs
@@ -72,18 +72,18 @@ module process_test;
         Rin = 8'd0;
         Gin = 8'd0;
         Bin = 8'd0;
-        operation = 3'b000;  //===========================> SELECT OPERATION HERE
+        operation = 3'b111;  //===========================> SELECT OPERATION HERE
         value = 8'd20;       //===========================> GIVE A VALUE FOR BRIGHTNESS or THRESHOLD
         reset = 1'b0;
         OKin = 1'b0;
         
 		wea = 1'b0;
-		addra = 17'd0;
+		addra = 18'd0;
 		dina = 24'd0;
 		ena = 1'b1;
         
         // open the coe file to write
-        file = $fopen("brightness.coe","wb");
+        file = $fopen("inversion.coe","wb");
         //#0.25;
     end
     
@@ -94,7 +94,7 @@ module process_test;
     
     always@(posedge clka)
 	begin
-	   if(addra == 17'd0)
+	   if(addra == 18'd0)
 	       fork
 	           begin
 	               $fwrite(file,"Memory_initialization_radix=2;\n");
@@ -102,7 +102,7 @@ module process_test;
 	           end
 	           #1;
 	       join
-	   else if(addra == 17'd1)
+	   else if(addra == 18'd1)
 	       fork
 	           begin
 	               $fwrite(file,"Memory_initialization_vector=\n");
@@ -110,7 +110,7 @@ module process_test;
 	           end
 	           #1.75;
 	       join
-	   else if(addra < 17'd90002)
+	   else if(addra < 18'd200001)
 	       begin
 	           fork
 	               begin
