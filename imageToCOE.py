@@ -2,7 +2,7 @@ from PIL import Image
 import os
 
 # Load any image file
-file = "C:\\Users\\sks96\\VS Code\\car.png"
+file = "C:\\Users\\VivadoProjects\\original.png" # path of your original image
 image = Image.open(file)
 
 # Get the pixel format of the image using 'mode' attribute
