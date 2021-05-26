@@ -2,7 +2,7 @@ from PIL import Image
 import os
 
 # Load the COE file
-coe_file = "C:\\Users\\sks96\\Vivado Projects\\ImageProcessing_2\\ImageProcessing_2.sim\\sim_1\\behav\\xsim\\inversion.coe"
+coe_file = "projectname\\projectname.sim\\sim_1\\behav\\xsim\\threshold.coe"
 # Make an array or tuple to store RGB value for eah pixel
 pixel_array = []
 # Read the file
