@@ -83,7 +83,7 @@ module process_test;
 		ena = 1'b1;
         
         // open the coe file to write
-        file = $fopen("inversion.coe","wb");
+	    file = $fopen("inversion.coe","wb"); // file will be generated in your project's simulation folder
         //#0.25;
     end
     
